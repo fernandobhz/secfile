@@ -33,7 +33,7 @@ let flagOverwrite = false;
 let flagMove = false;
 
 if (askPasswordOrInputPassword === "ask") {
-  password = await askPassword();
+  password = askPassword();
 
   if (!password) {
     die(`Password can't be empty`);

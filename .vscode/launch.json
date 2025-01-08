@@ -9,24 +9,26 @@
       "request": "launch",
       "name": "Encrypt **/*",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["enc", "**/*", "1234", "move=C:\\Users\\Administrator\\Desktop\\Old.Encrypted\\"],
-      "cwd": "C:\\Users\\Administrator\\Desktop\\Old\\"
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["enc", "**/*", "1234", "move=/c/Users/Administrator/Desktop/Old.Encrypted/"],
+      "cwd": "/c/Users/Administrator/Desktop/Old/"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Encrypt *",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["enc", "*.bin", "1234"]
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["enc", "*.bin", "ask"],
+      "runtimeExecutable": "/home/fernando/.nvm/versions/node/v18.16.0/bin/node",
+      "outputCapture": "std"
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Encrypt * Overwrite",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["enc", "*.bin", "1234", "overwrite"]
     },
     {
@@ -34,31 +36,31 @@
       "request": "launch",
       "name": "Encrypt * Move",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["enc", "*.bin", "1234", "move=..\\tst"]
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["enc", "*.bin", "1234", "move=../tst"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Encrypt * Move Overwrite",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["enc", "*.bin", "1234", "move=..\\tst", "overwrite"]
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["enc", "*.bin", "1234", "move=../tst", "overwrite"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Encrypt * Move Overwrite Delete",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["enc", "*.bin", "1234", "move=..\\tst", "overwrite", "delete"]
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["enc", "*.bin", "1234", "move=../tst", "overwrite", "delete"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Encrypt MCF",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["enc", "1234567890.bin", "1234"]
     },
     {
@@ -66,7 +68,7 @@
       "request": "launch",
       "name": "Encrypt MF",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": [
         "enc",
         "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890012345678900123456789001234.bin",
@@ -78,7 +80,7 @@
       "request": "launch",
       "name": "Encrypt Raw",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": [
         "enc",
         "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890012345678900123456789001234567890.bin",
@@ -90,7 +92,7 @@
       "request": "launch",
       "name": "Encrypt Raw Truncated",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": [
         "enc",
         "TRUNCATED01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678900123456789001234567890000000000.bin",
@@ -102,7 +104,7 @@
       "request": "launch",
       "name": "Decrypt *",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["dec", "*.secfile", "1234"]
     },
     {
@@ -110,7 +112,7 @@
       "request": "launch",
       "name": "Decrypt * Overwrite",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["dec", "*.secfile", "1234", "overwrite"]
     },
     {
@@ -118,31 +120,31 @@
       "request": "launch",
       "name": "Decrypt * Move",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["dec", "*.secfile", "1234", "move=..\\tst"]
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["dec", "*.secfile", "1234", "move=../tst"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Decrypt * Move Overwrite",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["dec", "*.secfile", "1234", "move=..\\tst", "overwrite"]
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["dec", "*.secfile", "1234", "move=../tst", "overwrite"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Decrypt * Move Overwrite Delete",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
-      "args": ["dec", "*.secfile", "1234", "move=..\\tst", "overwrite", "delete"]
+      "program": "${workspaceFolder}/index.mjs",
+      "args": ["dec", "*.secfile", "1234", "move=../tst", "overwrite", "delete"]
     },
     {
       "type": "node",
       "request": "launch",
       "name": "Decrypt MCF",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["dec", "MCF.000101000000.000101000000.mcf.bin.secfile", "1234"]
     },
     {
@@ -150,7 +152,7 @@
       "request": "launch",
       "name": "Decrypt MF",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["dec", "MF.000101000000.mf.bin.secfile", "1234"]
     },
     {
@@ -158,7 +160,7 @@
       "request": "launch",
       "name": "Decrypt Raw",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["dec", "raw.bin.secfile", "1234"]
     },
     {
@@ -166,7 +168,7 @@
       "request": "launch",
       "name": "Decrypt Raw Truncated",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\index.mjs",
+      "program": "${workspaceFolder}/index.mjs",
       "args": ["dec", "truncated.bin.secfile", "1234"]
     }
   ]
